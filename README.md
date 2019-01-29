@@ -1,21 +1,22 @@
 Jangeran
 ========
 
-Easily vagrant up the latest ubuntu (Interim Releases) machine.
+Easily vagrant up the latest ubuntu machine, but interim releases only.
 
 
 Included Software
 -----------------
 
-- Ubuntu 18.04
+- Ubuntu 18.10
 - Git
 - PHP 7.2
 - Apache
 - MySQL
 - Sqlite3
 - PostgreSQL
-- Composer
 - Node
+- Composer
+- WP-CLI
 - MailHog
 - mhsendmail
 - Oh My ZSH!

@@ -56,9 +56,9 @@ extras_ohmyzsh_install() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-# extras_nodejs_install
-# extras_composer_install
-# extras_wpcli_install
-# extras_mailhog_install
-# extras_mhsendmail_install
-# extras_ohmyzsh_install
+extras_nodejs_install
+extras_composer_install
+extras_wpcli_install
+extras_mailhog_install
+extras_mhsendmail_install
+extras_ohmyzsh_install

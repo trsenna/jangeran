@@ -59,9 +59,9 @@ webserver_ownership() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-# webserver_install
-# webserver_setup
-# webserver_ownership
-#
-# # Restart service
-# service apache2 restart
+webserver_install
+webserver_setup
+webserver_ownership
+
+# Restart service
+service apache2 restart
