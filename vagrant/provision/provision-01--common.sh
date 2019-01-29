@@ -23,5 +23,5 @@ common_install() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-common_update
-common_install
+# common_update
+# common_install

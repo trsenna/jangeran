@@ -7,9 +7,6 @@ extras_nodejs_install() {
   if [ ! -f "/usr/bin/node" ]; then
     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     apt-get install -y nodejs
-    /usr/bin/npm install -g yarn
-    /usr/bin/npm install -g grunt-cli
-    /usr/bin/npm install -g gulp-cli
   fi
 }
 
@@ -59,9 +56,9 @@ extras_ohmyzsh_install() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-extras_nodejs_install
-extras_composer_install
-extras_wpcli_install
-extras_mailhog_install
-extras_mhsendmail_install
-extras_ohmyzsh_install
+# extras_nodejs_install
+# extras_composer_install
+# extras_wpcli_install
+# extras_mailhog_install
+# extras_mhsendmail_install
+# extras_ohmyzsh_install

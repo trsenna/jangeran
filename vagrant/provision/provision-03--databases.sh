@@ -19,8 +19,8 @@ database_install() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-database_install
-
-# Restart services
-service mysql restart
-service postgresql restart
+# database_install
+#
+# # Restart services
+# service mysql restart
+# service postgresql restart
