@@ -10,6 +10,19 @@ extras_nodejs_install() {
   fi
 }
 
+extras_javasdk_install() {
+  apt-get -y install \
+    openjdk-8-jdk \
+    openjdk-8-source
+
+  if [ ! -d "/home/vagrant/.sdkman" ]; then
+    su - vagrant -c 'curl -s "https://get.sdkman.io" | bash'
+    su - vagrant -c 'source /home/vagrant/.sdkman/bin/sdkman-init.sh && yes | sdk install groovy'
+    su - vagrant -c 'source /home/vagrant/.sdkman/bin/sdkman-init.sh && yes | sdk install gradle'
+    su - vagrant -c 'source /home/vagrant/.sdkman/bin/sdkman-init.sh && yes | sdk install maven'
+  fi
+}
+
 extras_composer_install() {
   if [ ! -f "/usr/local/bin/composer" ]; then
     curl -sS https://getcomposer.org/installer | php
@@ -55,8 +68,8 @@ extras_ohmyzsh_install() {
 #== Provisioning Script ==
 
 export DEBIAN_FRONTEND=noninteractive
-
 extras_nodejs_install
+extras_javasdk_install
 extras_composer_install
 extras_wpcli_install
 extras_mailhog_install

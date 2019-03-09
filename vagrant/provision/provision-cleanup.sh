@@ -3,14 +3,17 @@
 #== Variables ==
 #== Functionality ==
 
-cleanup() {
+cleanup_clean() {
   apt-get -y autoremove
   apt-get -y clean
+}
+
+cleanup_ownership() {
   chown -R vagrant:vagrant /home/vagrant
 }
 
 #== Provisioning Script ==
 
 export DEBIAN_FRONTEND=noninteractive
-
-cleanup
+cleanup_clean
+cleanup_ownership
