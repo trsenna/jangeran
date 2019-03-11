@@ -15,19 +15,33 @@ apt-get -y install \
 
 
 #====================================================
-#== Database
+#== MySQL
 #====================================================
 echo "mysql-server mysql-server/root_password password root@secret" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password root@secret" | debconf-set-selections
+apt-get -y install mysql-server
 
+
+
+
+
+#====================================================
+#== PostgreSQL
+#====================================================
 apt-get -y install \
-  mysql-server \
-  postgresql postgresql-contrib \
-  sqlite3 libsqlite3-dev
+  postgresql \
+  postgresql-contrib
 
-#== service restart ==
-service mysql restart
-service postgresql restart
+
+
+
+
+#====================================================
+#== SQLite
+#====================================================
+apt-get -y install \
+  sqlite3 \
+  libsqlite3-dev
 
 
 
@@ -36,7 +50,6 @@ service postgresql restart
 #====================================================
 #== Node.js
 #====================================================
-
 if [ ! -f "/usr/bin/node" ]; then
   curl -sL https://deb.nodesource.com/setup_8.x | bash -
   apt-get install -y nodejs
@@ -49,7 +62,6 @@ fi
 #====================================================
 #== Java SDK
 #====================================================
-#== Java SDK ==
 apt-get -y install \
   openjdk-8-jdk \
   openjdk-8-source
