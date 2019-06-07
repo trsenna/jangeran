@@ -30,5 +30,5 @@ The Hosts File
 You must add the "domains" for your sites to the `hosts` file on your machine. The `hosts` file will redirect requests for your sites into your Jangeran machine. On Mac and Linux, this file is located at `/etc/hosts`. The lines you add to this file will look like the following:
 
 ~~~
-192.168.28.10 jangeran.local
+192.168.29.10 jangeran.local
 ~~~
